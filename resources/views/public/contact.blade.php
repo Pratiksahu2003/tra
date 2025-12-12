@@ -81,12 +81,28 @@
                         <div>
                             <h3 class="font-bold text-lg text-gray-900 dark:text-gray-100 mb-2">Email</h3>
                             <p class="text-gray-700 dark:text-gray-300 mb-1">
-                                <a href="mailto:support@Trading Floor.com" class="hover:text-blue-600 dark:hover:text-blue-400 transition">support@Trading Floor.com</a>
+                                <a href="mailto:support@tradingfloors.in" class="hover:text-blue-600 dark:hover:text-blue-400 transition">support@tradingfloors.in</a>
                             </p>
                             <p class="text-gray-700 dark:text-gray-300">
-                                <a href="mailto:info@Trading Floor.com" class="hover:text-blue-600 dark:hover:text-blue-400 transition">info@Trading Floor.com</a>
+                                <a href="mailto:support@tradingfloors.in" class="hover:text-blue-600 dark:hover:text-blue-400 transition">support@tradingfloors.in</a>
                             </p>
                             <p class="text-sm text-gray-500 dark:text-gray-400 mt-2">Response within 24 hours</p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-start space-x-4 bg-gray-50 dark:bg-gray-700 p-6 rounded-xl shadow-lg">
+                        <div class="w-14 h-14 bg-gradient-to-br from-orange-500 to-orange-600 rounded-xl flex items-center justify-center flex-shrink-0 shadow-lg">
+                            <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
+                            </svg>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-lg text-gray-900 dark:text-gray-100 mb-2">Phone</h3>
+                            <p class="text-gray-700 dark:text-gray-300 font-semibold mb-1">
+                                <a href="tel:+919716116108" class="hover:text-blue-600 dark:hover:text-blue-400 transition">+91 9716116108</a>
+                            </p>
+                            <p class="text-gray-600 dark:text-gray-400 text-sm">Call us anytime for immediate assistance</p>
+                            <p class="text-gray-600 dark:text-gray-400 text-sm mt-2">Available 24/7</p>
                         </div>
                     </div>
 
@@ -113,9 +129,10 @@
                         </div>
                         <div>
                             <h3 class="font-bold text-lg text-gray-900 dark:text-gray-100 mb-2">Office Address</h3>
-                            <p class="text-gray-700 dark:text-gray-300">123 Crypto Street</p>
-                            <p class="text-gray-700 dark:text-gray-300">Digital City, DC 12345</p>
-                            <p class="text-gray-700 dark:text-gray-300">United States</p>
+                            <p class="text-gray-700 dark:text-gray-300">RZ- 478/5 basement street no -45</p>
+                            <p class="text-gray-700 dark:text-gray-300">Sadh Nagar -2 palam nasir pur road</p>
+                            <p class="text-gray-700 dark:text-gray-300">Dwarka, New Delhi - 110045</p>
+                            <p class="text-gray-700 dark:text-gray-300">India</p>
                             <p class="text-sm text-gray-500 dark:text-gray-400 mt-2">Visit by appointment only</p>
                         </div>
                     </div>

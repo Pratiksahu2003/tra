@@ -125,6 +125,47 @@
             </div>
         </div>
 
+        <!-- Contact Information -->
+        <div class="mb-16">
+            <h2 class="text-3xl font-bold text-gray-900 dark:text-gray-100 mb-8 text-center">Get in Touch</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="bg-gradient-to-br from-blue-50 to-blue-100 dark:from-gray-700 dark:to-gray-800 p-6 rounded-xl shadow-lg text-center">
+                    <div class="w-16 h-16 bg-blue-600 rounded-xl flex items-center justify-center mx-auto mb-4">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="font-bold text-lg text-gray-900 dark:text-gray-100 mb-2">Phone</h3>
+                    <p class="text-gray-700 dark:text-gray-300">
+                        <a href="tel:+919716116108" class="hover:text-blue-600 dark:hover:text-blue-400 transition">+91 9716116108</a>
+                    </p>
+                </div>
+                <div class="bg-gradient-to-br from-green-50 to-green-100 dark:from-gray-700 dark:to-gray-800 p-6 rounded-xl shadow-lg text-center">
+                    <div class="w-16 h-16 bg-green-600 rounded-xl flex items-center justify-center mx-auto mb-4">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="font-bold text-lg text-gray-900 dark:text-gray-100 mb-2">Email</h3>
+                    <p class="text-gray-700 dark:text-gray-300">
+                        <a href="mailto:support@tradingfloors.in" class="hover:text-green-600 dark:hover:text-green-400 transition">support@tradingfloors.in</a>
+                    </p>
+                </div>
+                <div class="bg-gradient-to-br from-purple-50 to-purple-100 dark:from-gray-700 dark:to-gray-800 p-6 rounded-xl shadow-lg text-center">
+                    <div class="w-16 h-16 bg-purple-600 rounded-xl flex items-center justify-center mx-auto mb-4">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="font-bold text-lg text-gray-900 dark:text-gray-100 mb-2">Address</h3>
+                    <p class="text-sm text-gray-700 dark:text-gray-300">RZ- 478/5 basement street no -45</p>
+                    <p class="text-sm text-gray-700 dark:text-gray-300">Sadh Nagar -2 palam nasir pur road</p>
+                    <p class="text-sm text-gray-700 dark:text-gray-300">Dwarka, New Delhi - 110045</p>
+                </div>
+            </div>
+        </div>
+
         <!-- CTA -->
         <div class="text-center bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-12 shadow-xl">
             <h2 class="text-3xl font-bold text-white mb-4">Ready to Get Started?</h2>

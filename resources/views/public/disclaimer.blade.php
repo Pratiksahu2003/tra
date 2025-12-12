@@ -197,8 +197,9 @@
                     If you have any questions about this Disclaimer, please contact us:
                 </p>
                 <div class="space-y-2 text-blue-100">
-                    <p><strong>Email:</strong> support@Trading Floor.com</p>
-                    <p><strong>Address:</strong> 123 Crypto Street, Digital City, DC 12345, United States</p>
+                    <p><strong>Phone:</strong> <a href="tel:+919716116108" class="hover:text-white underline">+91 9716116108</a></p>
+                    <p><strong>Email:</strong> <a href="mailto:support@tradingfloors.in" class="hover:text-white underline">support@tradingfloors.in</a></p>
+                    <p><strong>Address:</strong> RZ- 478/5 basement street no -45 Sadh Nagar -2 palam nasir pur road dwarka new delhi 110045</p>
                 </div>
             </div>
         </div>
