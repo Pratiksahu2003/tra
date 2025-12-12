@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <title>@yield('title', 'Crypto Trading Platform')</title>
+    <link rel="icon" type="image/png" href="{{ asset('images/fav.PNG') }}">
+    <link rel="shortcut icon" type="image/png" href="{{ asset('images/fav.PNG') }}">
+    <link rel="apple-touch-icon" href="{{ asset('images/fav.PNG') }}">
     <link rel="preconnect" href="https://fonts.bunny.net">
     <link href="https://fonts.bunny.net/css?family=figtree:400,500,600,700&display=swap" rel="stylesheet" />
     @vite(['resources/css/app.css', 'resources/js/app.js'])
@@ -16,11 +19,10 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between h-16">
                 <div class="flex items-center">
-                    <a href="{{ route('home') }}" class="flex items-center space-x-2 group">
-                        <div class="w-10 h-10 bg-gradient-to-br from-blue-600 to-purple-600 rounded-lg flex items-center justify-center shadow-lg group-hover:shadow-xl transition">
-                            <span class="text-white font-bold text-xl">C</span>
+                    <a href="{{ route('home') }}" class="flex items-center space-x-3 group">
+                        <div class="bg-white rounded-lg p-2 shadow-sm group-hover:shadow-md transition-shadow">
+                            <img src="{{ asset('images/logo.png') }}" alt="Trading Floor" class="h-10 w-auto group-hover:scale-105 transition-transform duration-300">
                         </div>
-                        <span class="text-xl font-bold text-gray-900 dark:text-gray-100 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition">Trading Floor</span>
                     </a>
                 </div>
                 <div class="hidden md:flex items-center space-x-1">
@@ -65,10 +67,9 @@
             <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
                 <div>
                     <div class="flex items-center space-x-2 mb-4">
-                        <div class="w-8 h-8 bg-gradient-to-br from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
-                            <span class="text-white font-bold">C</span>
+                        <div class="bg-white rounded-lg p-2 shadow-sm">
+                            <img src="{{ asset('images/logo.png') }}" alt="Trading Floor" class="h-8 w-auto">
                         </div>
-                        <span class="text-white font-bold">Trading Floor</span>
                     </div>
                     <p class="text-sm">The best platform for cryptocurrency trading and portfolio management.</p>
                 </div>

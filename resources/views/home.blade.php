@@ -5,85 +5,124 @@
 @section('content')
 <!-- Hero Section with Animated Background -->
 <section class="relative overflow-hidden bg-gradient-to-br from-blue-600 via-purple-600 to-indigo-700 min-h-screen flex items-center">
+    <!-- Enhanced Background Layers -->
     <div class="absolute inset-0">
+        <!-- Grid Pattern -->
         <div class="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%23ffffff" fill-opacity="0.05"%3E%3Cpath d="M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-20"></div>
-        <div class="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-transparent via-transparent to-black/20"></div>
+        <!-- Gradient Overlay -->
+        <div class="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-transparent via-transparent to-black/30"></div>
+        <!-- Shimmer Effect -->
+        <div class="absolute inset-0 bg-gradient-to-r from-transparent via-white/5 to-transparent -translate-x-full animate-shimmer"></div>
     </div>
     
-    <!-- Animated floating elements -->
-    <div class="absolute top-20 left-10 w-72 h-72 bg-blue-400 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-blob"></div>
-    <div class="absolute top-40 right-10 w-72 h-72 bg-purple-400 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-blob animation-delay-2000"></div>
-    <div class="absolute -bottom-8 left-1/2 w-72 h-72 bg-pink-400 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-blob animation-delay-4000"></div>
+    <!-- Enhanced Animated Floating Elements -->
+    <div class="absolute top-20 left-10 w-96 h-96 bg-blue-400 rounded-full mix-blend-multiply filter blur-3xl opacity-25 animate-blob"></div>
+    <div class="absolute top-40 right-10 w-96 h-96 bg-purple-400 rounded-full mix-blend-multiply filter blur-3xl opacity-25 animate-blob animation-delay-2000"></div>
+    <div class="absolute -bottom-8 left-1/2 w-96 h-96 bg-pink-400 rounded-full mix-blend-multiply filter blur-3xl opacity-25 animate-blob animation-delay-4000"></div>
+    <div class="absolute top-1/2 right-1/4 w-64 h-64 bg-indigo-400 rounded-full mix-blend-multiply filter blur-2xl opacity-20 animate-blob animation-delay-6000"></div>
     
-    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-32">
+    <!-- Crypto Icons Floating Animation -->
+    <div class="absolute top-1/4 left-1/4 w-16 h-16 opacity-10 animate-float">
+        <svg class="w-full h-full text-white" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm0 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/>
+        </svg>
+    </div>
+    <div class="absolute bottom-1/4 right-1/4 w-12 h-12 opacity-10 animate-float animation-delay-2000">
+        <svg class="w-full h-full text-white" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm0 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/>
+        </svg>
+    </div>
+    
+    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 sm:py-32 z-10">
         <div class="text-center">
-            <!-- Trust Badge -->
-            <div class="inline-flex items-center mb-6 px-6 py-3 bg-white/10 backdrop-blur-md rounded-full text-white text-sm font-medium border border-white/20 shadow-lg">
-                <svg class="w-5 h-5 mr-2 text-green-300" fill="currentColor" viewBox="0 0 20 20">
-                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
-                </svg>
-                Trusted by 50,000+ Traders Worldwide
+            <!-- Enhanced Trust Badge with Pulse Animation -->
+            <div class="inline-flex items-center mb-8 px-8 py-4 bg-white/15 backdrop-blur-xl rounded-full text-white text-sm sm:text-base font-semibold border-2 border-white/30 shadow-2xl hover:bg-white/20 transition-all duration-300 transform hover:scale-105 animate-fade-in">
+                <div class="relative">
+                    <div class="absolute inset-0 bg-green-400 rounded-full animate-ping opacity-75"></div>
+                    <svg class="relative w-6 h-6 mr-3 text-green-300" fill="currentColor" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                    </svg>
+                </div>
+                <span class="font-bold">Trusted by 50,000+ Traders Worldwide</span>
             </div>
             
-            <!-- Main Heading -->
-            <h1 class="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-extrabold text-white mb-8 leading-tight">
-                <span class="block mb-2">Trade Crypto Market</span>
-                <span class="block text-transparent bg-clip-text bg-gradient-to-r from-yellow-300 via-orange-300 to-pink-300 animate-gradient">
+            <!-- Enhanced Main Heading with Better Typography -->
+            <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-black text-white mb-6 sm:mb-8 leading-[1.1] tracking-tight animate-fade-in-up">
+                <span class="block mb-2 sm:mb-3 drop-shadow-2xl">Trade Crypto Market</span>
+                <span class="block text-transparent bg-clip-text bg-gradient-to-r from-yellow-300 via-orange-300 to-pink-300 animate-gradient drop-shadow-lg">
                     Like a Pro
                 </span>
             </h1>
             
-            <!-- Subheading -->
-            <p class="mt-6 text-xl sm:text-2xl md:text-3xl text-blue-100 max-w-4xl mx-auto leading-relaxed font-light">
+            <!-- Enhanced Subheading -->
+            <p class="mt-6 sm:mt-8 text-lg sm:text-xl md:text-2xl lg:text-3xl text-blue-50 max-w-4xl mx-auto leading-relaxed font-light px-4 animate-fade-in-up animation-delay-200">
                 The most advanced crypto trading platform. Buy, sell, and manage your cryptocurrency portfolio with ease. 
-                <span class="font-semibold text-white">Start your journey today.</span>
+                <span class="font-semibold text-white drop-shadow-md">Start your journey today.</span>
             </p>
             
-            <!-- CTA Buttons -->
-            <div class="mt-12 flex flex-col sm:flex-row gap-6 justify-center items-center">
-                <a href="{{ route('cryptos.public') }}" class="group relative px-10 py-5 bg-white text-blue-600 rounded-xl font-bold text-lg hover:bg-gray-100 transition-all duration-300 shadow-2xl hover:shadow-blue-500/50 transform hover:-translate-y-2 overflow-hidden">
-                    <span class="relative z-10 flex items-center">
+            <!-- Enhanced CTA Buttons with Better Styling -->
+            <div class="mt-10 sm:mt-12 md:mt-16 flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center items-center px-4 animate-fade-in-up animation-delay-400">
+                <a href="{{ route('cryptos.public') }}" class="group relative px-8 sm:px-10 py-4 sm:py-5 bg-white text-blue-600 rounded-2xl font-bold text-base sm:text-lg hover:bg-gray-50 transition-all duration-300 shadow-2xl hover:shadow-blue-500/50 transform hover:-translate-y-1 hover:scale-105 overflow-hidden w-full sm:w-auto">
+                    <span class="relative z-10 flex items-center justify-center">
+                        <svg class="w-5 h-5 sm:w-6 sm:h-6 mr-2 sm:mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                        </svg>
                         Browse Crypto Market
-                        <svg class="ml-3 w-6 h-6 group-hover:translate-x-2 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <svg class="ml-2 sm:ml-3 w-5 h-5 sm:w-6 sm:h-6 group-hover:translate-x-2 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
                         </svg>
                     </span>
                     <div class="absolute inset-0 bg-gradient-to-r from-blue-500 to-purple-500 opacity-0 group-hover:opacity-10 transition-opacity"></div>
+                    <div class="absolute inset-0 bg-white/20 transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-500"></div>
                 </a>
-                <a href="{{ route('features') }}" class="group px-10 py-5 bg-transparent border-3 border-white text-white rounded-xl font-bold text-lg hover:bg-white hover:text-blue-600 transition-all duration-300 backdrop-blur-sm shadow-xl">
-                    Explore Features
+                <a href="{{ route('features') }}" class="group px-8 sm:px-10 py-4 sm:py-5 bg-transparent border-2 border-white/50 text-white rounded-2xl font-bold text-base sm:text-lg hover:bg-white hover:text-blue-600 transition-all duration-300 backdrop-blur-sm shadow-xl hover:shadow-2xl hover:border-white transform hover:-translate-y-1 hover:scale-105 w-full sm:w-auto">
+                    <span class="flex items-center justify-center">
+                        Explore Features
+                        <svg class="ml-2 sm:ml-3 w-5 h-5 sm:w-6 sm:h-6 group-hover:rotate-12 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"></path>
+                        </svg>
+                    </span>
                 </a>
             </div>
             
-            <!-- Trust Indicators -->
-            <div class="mt-16 flex flex-wrap justify-center gap-8 text-white/90">
-                <div class="flex items-center space-x-3 bg-white/10 backdrop-blur-md px-6 py-3 rounded-lg border border-white/20">
-                    <svg class="w-6 h-6 text-green-300" fill="currentColor" viewBox="0 0 20 20">
-                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
-                    </svg>
-                    <span class="font-semibold">No Hidden Fees</span>
+            <!-- Enhanced Trust Indicators -->
+            <div class="mt-12 sm:mt-16 md:mt-20 flex flex-wrap justify-center gap-4 sm:gap-6 md:gap-8 text-white/90 px-4 animate-fade-in-up animation-delay-600">
+                <div class="flex items-center space-x-3 bg-white/10 backdrop-blur-xl px-5 sm:px-6 py-3 sm:py-4 rounded-xl border border-white/20 shadow-lg hover:bg-white/15 hover:scale-105 transition-all duration-300 group">
+                    <div class="w-8 h-8 sm:w-10 sm:h-10 bg-green-400/20 rounded-lg flex items-center justify-center group-hover:bg-green-400/30 transition-colors">
+                        <svg class="w-5 h-5 sm:w-6 sm:h-6 text-green-300" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                        </svg>
+                    </div>
+                    <span class="font-semibold text-sm sm:text-base">No Hidden Fees</span>
                 </div>
-                <div class="flex items-center space-x-3 bg-white/10 backdrop-blur-md px-6 py-3 rounded-lg border border-white/20">
-                    <svg class="w-6 h-6 text-green-300" fill="currentColor" viewBox="0 0 20 20">
-                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
-                    </svg>
-                    <span class="font-semibold">Instant Trading</span>
+                <div class="flex items-center space-x-3 bg-white/10 backdrop-blur-xl px-5 sm:px-6 py-3 sm:py-4 rounded-xl border border-white/20 shadow-lg hover:bg-white/15 hover:scale-105 transition-all duration-300 group">
+                    <div class="w-8 h-8 sm:w-10 sm:h-10 bg-green-400/20 rounded-lg flex items-center justify-center group-hover:bg-green-400/30 transition-colors">
+                        <svg class="w-5 h-5 sm:w-6 sm:h-6 text-green-300" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                        </svg>
+                    </div>
+                    <span class="font-semibold text-sm sm:text-base">Instant Trading</span>
                 </div>
-                <div class="flex items-center space-x-3 bg-white/10 backdrop-blur-md px-6 py-3 rounded-lg border border-white/20">
-                    <svg class="w-6 h-6 text-green-300" fill="currentColor" viewBox="0 0 20 20">
-                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
-                    </svg>
-                    <span class="font-semibold">24/7 Support</span>
+                <div class="flex items-center space-x-3 bg-white/10 backdrop-blur-xl px-5 sm:px-6 py-3 sm:py-4 rounded-xl border border-white/20 shadow-lg hover:bg-white/15 hover:scale-105 transition-all duration-300 group">
+                    <div class="w-8 h-8 sm:w-10 sm:h-10 bg-green-400/20 rounded-lg flex items-center justify-center group-hover:bg-green-400/30 transition-colors">
+                        <svg class="w-5 h-5 sm:w-6 sm:h-6 text-green-300" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                        </svg>
+                    </div>
+                    <span class="font-semibold text-sm sm:text-base">24/7 Support</span>
                 </div>
             </div>
         </div>
     </div>
     
-    <!-- Scroll Indicator -->
-    <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce">
-        <svg class="w-6 h-6 text-white/60" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
-        </svg>
+    <!-- Enhanced Scroll Indicator -->
+    <div class="absolute bottom-8 sm:bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce z-10">
+        <div class="flex flex-col items-center space-y-2">
+            <span class="text-white/60 text-xs font-medium uppercase tracking-wider">Scroll</span>
+            <svg class="w-6 h-6 text-white/60" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+            </svg>
+        </div>
     </div>
 </section>
 
@@ -414,6 +453,9 @@
     .animation-delay-4000 {
         animation-delay: 4s;
     }
+    .animation-delay-6000 {
+        animation-delay: 6s;
+    }
     @keyframes gradient {
         0%, 100% {
             background-position: 0% 50%;
@@ -425,6 +467,64 @@
     .animate-gradient {
         background-size: 200% 200%;
         animation: gradient 3s ease infinite;
+    }
+    @keyframes shimmer {
+        0% {
+            transform: translateX(-100%);
+        }
+        100% {
+            transform: translateX(100%);
+        }
+    }
+    .animate-shimmer {
+        animation: shimmer 3s infinite;
+    }
+    @keyframes float {
+        0%, 100% {
+            transform: translateY(0px) rotate(0deg);
+        }
+        50% {
+            transform: translateY(-20px) rotate(180deg);
+        }
+    }
+    .animate-float {
+        animation: float 6s ease-in-out infinite;
+    }
+    @keyframes fade-in {
+        from {
+            opacity: 0;
+        }
+        to {
+            opacity: 1;
+        }
+    }
+    .animate-fade-in {
+        animation: fade-in 1s ease-out;
+    }
+    @keyframes fade-in-up {
+        from {
+            opacity: 0;
+            transform: translateY(30px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+    .animate-fade-in-up {
+        animation: fade-in-up 0.8s ease-out forwards;
+    }
+    .animation-delay-200 {
+        animation-delay: 0.2s;
+        opacity: 0;
+    }
+    .animation-delay-400 {
+        animation-delay: 0.4s;
+        opacity: 0;
+    }
+    .animation-delay-600 {
+        animation-delay: 0.6s;
+        opacity: 0;
     }
     .price-updated {
         animation: priceFlash 0.5s ease-in-out;
