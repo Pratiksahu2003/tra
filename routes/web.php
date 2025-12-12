@@ -16,6 +16,7 @@ Route::get('/cryptos/public', [CryptoController::class, 'publicIndex'])->name('c
 Route::get('/about', [PublicController::class, 'about'])->name('about');
 Route::get('/features', [PublicController::class, 'features'])->name('features');
 Route::get('/contact', [PublicController::class, 'contact'])->name('contact');
+Route::post('/contact', [PublicController::class, 'storeContact'])->name('contact.store');
 Route::get('/privacy', [PublicController::class, 'privacy'])->name('privacy');
 Route::get('/terms', [PublicController::class, 'terms'])->name('terms');
 Route::get('/disclaimer', [PublicController::class, 'disclaimer'])->name('disclaimer');

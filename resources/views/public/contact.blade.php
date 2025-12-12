@@ -21,41 +21,63 @@
             <div class="bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-700 dark:to-gray-800 p-8 md:p-10 rounded-2xl shadow-xl">
                 <h2 class="text-3xl font-bold text-gray-900 dark:text-gray-100 mb-2">Send us a Message</h2>
                 <p class="text-gray-600 dark:text-gray-400 mb-8">Fill out the form below and we'll get back to you within 24 hours.</p>
+                
+                <div id="successMessage" class="hidden mb-6 p-4 bg-green-100 dark:bg-green-900 border border-green-400 dark:border-green-700 text-green-700 dark:text-green-300 rounded-lg"></div>
+                <div id="errorMessage" class="hidden mb-6 p-4 bg-red-100 dark:bg-red-900 border border-red-400 dark:border-red-700 text-red-700 dark:text-red-300 rounded-lg"></div>
+
                 <form id="contactForm" class="space-y-6">
                     @csrf
                     <div>
                         <label for="name" class="block text-sm font-semibold text-gray-700 dark:text-gray-300 mb-2">Your Name *</label>
-                        <input type="text" id="name" name="name" required
-                            class="w-full px-4 py-3 border-2 border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent dark:bg-gray-800 dark:text-gray-100 transition"
+                        <input type="text" id="name" name="name" value="{{ old('name') }}" required
+                            class="w-full px-4 py-3 border-2 border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent dark:bg-gray-800 dark:text-gray-100 transition @error('name') border-red-500 @enderror"
                             placeholder="John Doe">
+                        @error('name')
+                            <p class="mt-1 text-sm text-red-600 dark:text-red-400">{{ $message }}</p>
+                        @enderror
                     </div>
                     <div>
                         <label for="email" class="block text-sm font-semibold text-gray-700 dark:text-gray-300 mb-2">Email Address *</label>
-                        <input type="email" id="email" name="email" required
-                            class="w-full px-4 py-3 border-2 border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent dark:bg-gray-800 dark:text-gray-100 transition"
+                        <input type="email" id="email" name="email" value="{{ old('email') }}" required
+                            class="w-full px-4 py-3 border-2 border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent dark:bg-gray-800 dark:text-gray-100 transition @error('email') border-red-500 @enderror"
                             placeholder="john@example.com">
+                        @error('email')
+                            <p class="mt-1 text-sm text-red-600 dark:text-red-400">{{ $message }}</p>
+                        @enderror
                     </div>
                     <div>
                         <label for="subject" class="block text-sm font-semibold text-gray-700 dark:text-gray-300 mb-2">Subject *</label>
                         <select id="subject" name="subject" required
-                            class="w-full px-4 py-3 border-2 border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent dark:bg-gray-800 dark:text-gray-100 transition">
+                            class="w-full px-4 py-3 border-2 border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent dark:bg-gray-800 dark:text-gray-100 transition @error('subject') border-red-500 @enderror">
                             <option value="">Select a subject</option>
-                            <option value="general">General Inquiry</option>
-                            <option value="support">Technical Support</option>
-                            <option value="billing">Billing Question</option>
-                            <option value="partnership">Partnership Opportunity</option>
-                            <option value="other">Other</option>
+                            <option value="general" {{ old('subject') == 'general' ? 'selected' : '' }}>General Inquiry</option>
+                            <option value="support" {{ old('subject') == 'support' ? 'selected' : '' }}>Technical Support</option>
+                            <option value="billing" {{ old('subject') == 'billing' ? 'selected' : '' }}>Billing Question</option>
+                            <option value="partnership" {{ old('subject') == 'partnership' ? 'selected' : '' }}>Partnership Opportunity</option>
+                            <option value="other" {{ old('subject') == 'other' ? 'selected' : '' }}>Other</option>
                         </select>
+                        @error('subject')
+                            <p class="mt-1 text-sm text-red-600 dark:text-red-400">{{ $message }}</p>
+                        @enderror
                     </div>
                     <div>
                         <label for="message" class="block text-sm font-semibold text-gray-700 dark:text-gray-300 mb-2">Message *</label>
                         <textarea id="message" name="message" rows="6" required
-                            class="w-full px-4 py-3 border-2 border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent dark:bg-gray-800 dark:text-gray-100 transition resize-none"
-                            placeholder="Tell us how we can help you..."></textarea>
+                            class="w-full px-4 py-3 border-2 border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent dark:bg-gray-800 dark:text-gray-100 transition resize-none @error('message') border-red-500 @enderror"
+                            placeholder="Tell us how we can help you...">{{ old('message') }}</textarea>
+                        @error('message')
+                            <p class="mt-1 text-sm text-red-600 dark:text-red-400">{{ $message }}</p>
+                        @enderror
                     </div>
-                    <button type="submit" class="w-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-6 py-4 rounded-lg font-semibold transition shadow-lg hover:shadow-xl transform hover:-translate-y-1">
-                        Send Message
-                        <svg class="inline-block ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <button type="submit" id="submitBtn" class="w-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-6 py-4 rounded-lg font-semibold transition shadow-lg hover:shadow-xl transform hover:-translate-y-1 disabled:opacity-50 disabled:cursor-not-allowed">
+                        <span id="submitText">Send Message</span>
+                        <span id="submitLoader" class="hidden">
+                            <svg class="inline-block ml-2 w-5 h-5 animate-spin" fill="none" viewBox="0 0 24 24">
+                                <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+                                <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                            </svg>
+                        </span>
+                        <svg id="submitIcon" class="inline-block ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"></path>
                         </svg>
                     </button>
@@ -178,17 +200,87 @@
 
 @push('scripts')
 <script>
-    document.getElementById('contactForm').addEventListener('submit', function(e) {
-        e.preventDefault();
-        
-        Swal.fire({
-            icon: 'success',
-            title: 'Message Sent!',
-            text: 'Thank you for contacting us. We will get back to you within 24 hours.',
-            confirmButtonColor: '#4F46E5',
-            confirmButtonText: 'OK'
-        }).then(() => {
-            this.reset();
+    document.addEventListener('DOMContentLoaded', function() {
+        const form = document.getElementById('contactForm');
+        const submitBtn = document.getElementById('submitBtn');
+        const submitText = document.getElementById('submitText');
+        const submitLoader = document.getElementById('submitLoader');
+        const submitIcon = document.getElementById('submitIcon');
+        const successMessage = document.getElementById('successMessage');
+        const errorMessage = document.getElementById('errorMessage');
+
+        form.addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            // Hide previous messages
+            successMessage.classList.add('hidden');
+            errorMessage.classList.add('hidden');
+
+            // Disable submit button and show loading
+            submitBtn.disabled = true;
+            submitText.textContent = 'Sending...';
+            submitLoader.classList.remove('hidden');
+            submitIcon.classList.add('hidden');
+
+            // Get form data
+            const formData = new FormData(form);
+            const csrfToken = document.querySelector('meta[name="csrf-token"]').getAttribute('content');
+
+            // Submit via Axios
+            axios.post('{{ route("contact.store") }}', formData, {
+                headers: {
+                    'X-CSRF-TOKEN': csrfToken,
+                    'Content-Type': 'multipart/form-data'
+                }
+            })
+            .then(function(response) {
+                if (response.data.success) {
+                    // Show success message
+                    successMessage.textContent = response.data.message;
+                    successMessage.classList.remove('hidden');
+                    
+                    // Reset form
+                    form.reset();
+                    
+                    // Scroll to top to show message
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                } else {
+                    // Show error message
+                    errorMessage.textContent = response.data.message || 'An error occurred. Please try again.';
+                    errorMessage.classList.remove('hidden');
+                }
+            })
+            .catch(function(error) {
+                let errorMsg = 'An error occurred. Please try again.';
+                
+                if (error.response) {
+                    // Server responded with error
+                    if (error.response.data.message) {
+                        errorMsg = error.response.data.message;
+                    } else if (error.response.data.errors) {
+                        // Validation errors
+                        const errors = error.response.data.errors;
+                        const errorList = Object.values(errors).flat().join('<br>');
+                        errorMessage.innerHTML = errorList;
+                        errorMessage.classList.remove('hidden');
+                        submitBtn.disabled = false;
+                        submitText.textContent = 'Send Message';
+                        submitLoader.classList.add('hidden');
+                        submitIcon.classList.remove('hidden');
+                        return;
+                    }
+                }
+                
+                errorMessage.textContent = errorMsg;
+                errorMessage.classList.remove('hidden');
+            })
+            .finally(function() {
+                // Re-enable submit button
+                submitBtn.disabled = false;
+                submitText.textContent = 'Send Message';
+                submitLoader.classList.add('hidden');
+                submitIcon.classList.remove('hidden');
+            });
         });
     });
 </script>
