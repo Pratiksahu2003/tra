@@ -135,14 +135,14 @@
             <div class="mb-12 bg-yellow-50 dark:bg-yellow-900/20 p-8 rounded-2xl border-2 border-yellow-200 dark:border-yellow-800">
                 <h2 class="text-3xl font-bold text-gray-900 dark:text-gray-100 mb-6">Risk Disclosure</h2>
                 <p class="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
-                    <strong class="text-red-600 dark:text-red-400">IMPORTANT:</strong> Cryptocurrency trading involves substantial risk of loss and is not suitable for every investor. You should carefully consider whether trading cryptocurrencies is suitable for you in light of your circumstances, knowledge, and financial resources.
+                    <strong class="text-red-600 dark:text-red-400">IMPORTANT:</strong> Cryptocurrency trading involves substantial risk of loss and is not suitable for every investor. You should carefully consider whether trading Crypto Market is suitable for you in light of your circumstances, knowledge, and financial resources.
                 </p>
                 <p class="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
                     Risks include but are not limited to:
                 </p>
                 <ul class="list-disc list-inside text-gray-700 dark:text-gray-300 space-y-2">
                     <li><strong>Market Volatility:</strong> Cryptocurrency prices can be extremely volatile</li>
-                    <li><strong>Liquidity Risk:</strong> Some cryptocurrencies may have limited liquidity</li>
+                    <li><strong>Liquidity Risk:</strong> Some Crypto Market may have limited liquidity</li>
                     <li><strong>Regulatory Risk:</strong> Changes in regulations may affect trading</li>
                     <li><strong>Technical Risk:</strong> Technology failures or cyber attacks</li>
                     <li><strong>Loss of Funds:</strong> You may lose some or all of your invested capital</li>

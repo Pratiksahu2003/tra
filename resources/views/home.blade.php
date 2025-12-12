@@ -1,6 +1,6 @@
 @extends('layouts.public')
 
-@section('title', 'Crypto Trading Platform - Trade Cryptocurrencies with Ease')
+@section('title', 'Crypto Trading Platform - Trade Crypto Market with Ease')
 
 @section('content')
 <!-- Hero Section with Animated Background -->
@@ -27,7 +27,7 @@
             
             <!-- Main Heading -->
             <h1 class="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-extrabold text-white mb-8 leading-tight">
-                <span class="block mb-2">Trade Cryptocurrencies</span>
+                <span class="block mb-2">Trade Crypto Market</span>
                 <span class="block text-transparent bg-clip-text bg-gradient-to-r from-yellow-300 via-orange-300 to-pink-300 animate-gradient">
                     Like a Pro
                 </span>
@@ -43,7 +43,7 @@
             <div class="mt-12 flex flex-col sm:flex-row gap-6 justify-center items-center">
                 <a href="{{ route('cryptos.public') }}" class="group relative px-10 py-5 bg-white text-blue-600 rounded-xl font-bold text-lg hover:bg-gray-100 transition-all duration-300 shadow-2xl hover:shadow-blue-500/50 transform hover:-translate-y-2 overflow-hidden">
                     <span class="relative z-10 flex items-center">
-                        Browse Cryptocurrencies
+                        Browse Crypto Market
                         <svg class="ml-3 w-6 h-6 group-hover:translate-x-2 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
                         </svg>
@@ -103,7 +103,7 @@
             </div>
             <div class="text-center group">
                 <div class="text-5xl md:text-6xl font-extrabold bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent mb-3 group-hover:scale-110 transition-transform duration-300">150+</div>
-                <div class="text-gray-600 dark:text-gray-400 font-semibold text-lg">Cryptocurrencies</div>
+                <div class="text-gray-600 dark:text-gray-400 font-semibold text-lg">Crypto Market</div>
                 <div class="mt-2 h-1 w-20 bg-gradient-to-r from-purple-500 to-pink-500 mx-auto rounded-full"></div>
             </div>
             <div class="text-center group">
@@ -143,7 +143,7 @@
                     </div>
                     <h3 class="text-2xl font-bold text-gray-900 dark:text-gray-100 mb-4">Easy Trading</h3>
                     <p class="text-gray-600 dark:text-gray-400 leading-relaxed mb-6">
-                        Buy and sell cryptocurrencies with just a few clicks. Our intuitive interface makes trading simple for beginners and powerful for experts. No technical knowledge required.
+                        Buy and sell Crypto Market with just a few clicks. Our intuitive interface makes trading simple for beginners and powerful for experts. No technical knowledge required.
                     </p>
                     <div class="flex items-center text-blue-600 dark:text-blue-400 font-semibold group-hover:translate-x-2 transition-transform">
                         Learn more
@@ -233,7 +233,7 @@
                 </div>
                 <h3 class="text-2xl font-bold text-gray-900 dark:text-gray-100 mb-4">Browse & Research</h3>
                 <p class="text-lg text-gray-600 dark:text-gray-400 leading-relaxed">
-                    Explore 150+ cryptocurrencies with real-time prices, charts, and comprehensive market data. Make informed decisions.
+                    Explore 150+ Crypto Market with real-time prices, charts, and comprehensive market data. Make informed decisions.
                 </p>
             </div>
             <div class="relative text-center group">
@@ -252,29 +252,33 @@
     </div>
 </section>
 
-<!-- Top Cryptocurrencies Preview -->
+<!-- Top Crypto Market Preview -->
 <section class="py-24 bg-gradient-to-b from-gray-50 via-white to-gray-50 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="text-center mb-20">
             <div class="inline-block px-4 py-2 bg-green-100 dark:bg-green-900 text-green-600 dark:text-green-400 rounded-full text-sm font-semibold mb-4">MARKET LEADERS</div>
             <h2 class="text-5xl md:text-6xl font-extrabold text-gray-900 dark:text-gray-100 mb-6">
-                Popular <span class="bg-gradient-to-r from-green-600 to-teal-600 bg-clip-text text-transparent">Cryptocurrencies</span>
+                Popular <span class="bg-gradient-to-r from-green-600 to-teal-600 bg-clip-text text-transparent">Crypto Market</span>
             </h2>
             <p class="text-xl md:text-2xl text-gray-600 dark:text-gray-400">Trade the most popular digital assets with real-time market data</p>
         </div>
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6" id="top-cryptos-grid">
             @php
-                $topCryptos = \App\Models\Crypto::orderBy('volume_24h', 'desc')->take(8)->get();
+                $topCryptos = \App\Models\Crypto::orderBy('rank', 'asc')->take(8)->get();
             @endphp
             @foreach($topCryptos as $crypto)
-                <div class="group bg-white dark:bg-gray-800 p-6 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border-2 border-transparent hover:border-blue-500 relative overflow-hidden">
+                <div class="group bg-white dark:bg-gray-800 p-6 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border-2 border-transparent hover:border-blue-500 relative overflow-hidden" data-symbol="{{ $crypto->symbol }}">
                     <div class="absolute top-0 right-0 w-20 h-20 bg-gradient-to-br from-blue-500/10 to-transparent rounded-bl-full"></div>
                     <div class="relative">
                         <div class="flex items-center justify-between mb-4">
                             <div class="flex items-center space-x-3">
-                                <div class="w-14 h-14 bg-gradient-to-br from-blue-500 to-purple-600 rounded-xl flex items-center justify-center text-white font-bold text-lg shadow-lg group-hover:scale-110 group-hover:rotate-6 transition-transform duration-300">
-                                    {{ substr($crypto->symbol, 0, 1) }}
-                                </div>
+                                @if($crypto->logo_url)
+                                    <img src="{{ $crypto->logo_url }}" alt="{{ $crypto->symbol }}" class="w-14 h-14 rounded-xl shadow-lg group-hover:scale-110 group-hover:rotate-6 transition-transform duration-300">
+                                @else
+                                    <div class="w-14 h-14 bg-gradient-to-br from-blue-500 to-purple-600 rounded-xl flex items-center justify-center text-white font-bold text-lg shadow-lg group-hover:scale-110 group-hover:rotate-6 transition-transform duration-300">
+                                        {{ substr($crypto->symbol, 0, 1) }}
+                                    </div>
+                                @endif
                                 <div>
                                     <h3 class="font-bold text-xl text-gray-900 dark:text-gray-100">{{ $crypto->symbol }}</h3>
                                     <p class="text-sm text-gray-500 dark:text-gray-400">{{ $crypto->name }}</p>
@@ -284,13 +288,17 @@
                         <div class="space-y-3 pt-4 border-t-2 border-gray-100 dark:border-gray-700">
                             <div class="flex justify-between items-center">
                                 <span class="text-sm font-semibold text-gray-600 dark:text-gray-400">Price</span>
-                                <span class="font-bold text-xl text-gray-900 dark:text-gray-100">${{ number_format($crypto->price, 2) }}</span>
+                                <span class="font-bold text-xl text-gray-900 dark:text-gray-100 price-display" data-price="{{ $crypto->price }}">${{ number_format($crypto->price, 2) }}</span>
                             </div>
                             <div class="flex justify-between items-center">
                                 <span class="text-sm font-semibold text-gray-600 dark:text-gray-400">24h Change</span>
-                                <span class="font-semibold px-3 py-1 rounded-lg text-sm {{ $crypto->change_24h >= 0 ? 'bg-green-100 text-green-700 dark:bg-green-900 dark:text-green-300' : 'bg-red-100 text-red-700 dark:bg-red-900 dark:text-red-300' }}">
-                                    {{ $crypto->change_24h >= 0 ? '+' : '' }}{{ number_format($crypto->change_24h, 2) }}%
+                                <span class="font-semibold px-3 py-1 rounded-lg text-sm change-display {{ $crypto->change_24h >= 0 ? 'bg-green-100 text-green-700 dark:bg-green-900 dark:text-green-300' : 'bg-red-100 text-red-700 dark:bg-red-900 dark:text-red-300' }}" data-change="{{ $crypto->change_24h }}">
+                                    {{ $crypto->change_24h >= 0 ? '↑' : '↓' }} {{ $crypto->change_24h >= 0 ? '+' : '' }}{{ number_format($crypto->change_24h, 2) }}%
                                 </span>
+                            </div>
+                            <div class="flex justify-between items-center">
+                                <span class="text-sm font-semibold text-gray-600 dark:text-gray-400">Market Cap</span>
+                                <span class="text-sm font-medium text-gray-700 dark:text-gray-300">${{ $crypto->market_cap ? number_format($crypto->market_cap / 1000000000, 2) . 'B' : 'N/A' }}</span>
                             </div>
                             <div class="flex justify-between items-center">
                                 <span class="text-sm font-semibold text-gray-600 dark:text-gray-400">Volume</span>
@@ -303,7 +311,7 @@
         </div>
         <div class="text-center mt-12">
             <a href="{{ route('cryptos.public') }}" class="inline-flex items-center px-10 py-5 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white rounded-xl font-bold text-lg transition-all shadow-xl hover:shadow-2xl transform hover:-translate-y-1">
-                View All Cryptocurrencies
+                View All Crypto Market
                 <svg class="ml-3 w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
                 </svg>
@@ -367,7 +375,7 @@
         <div class="flex flex-col sm:flex-row gap-6 justify-center">
             <a href="{{ route('cryptos.public') }}" class="group relative px-12 py-6 bg-white text-blue-600 rounded-xl font-bold text-xl hover:bg-gray-100 transition-all duration-300 shadow-2xl hover:shadow-white/50 transform hover:-translate-y-2 overflow-hidden">
                 <span class="relative z-10 flex items-center">
-                    Browse Cryptocurrencies
+                    Browse Crypto Market
                     <svg class="ml-3 w-6 h-6 group-hover:translate-x-2 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
                     </svg>
@@ -418,6 +426,105 @@
         background-size: 200% 200%;
         animation: gradient 3s ease infinite;
     }
+    .price-updated {
+        animation: priceFlash 0.5s ease-in-out;
+    }
+    .price-increase {
+        color: #10b981 !important;
+    }
+    .price-decrease {
+        color: #ef4444 !important;
+    }
+    @keyframes priceFlash {
+        0%, 100% { background-color: transparent; }
+        50% { background-color: rgba(59, 130, 246, 0.2); }
+    }
 </style>
+@endpush
+
+@push('scripts')
+<script>
+    let priceUpdateInterval;
+    const cryptoData = {};
+
+    // Initialize crypto data from DOM
+    document.querySelectorAll('#top-cryptos-grid [data-symbol]').forEach(card => {
+        const symbol = card.dataset.symbol;
+        const priceElement = card.querySelector('.price-display');
+        const changeElement = card.querySelector('.change-display');
+        
+        if (priceElement && changeElement) {
+            cryptoData[symbol] = {
+                price: parseFloat(priceElement.dataset.price),
+                change: parseFloat(changeElement.dataset.change),
+                card: card,
+                priceElement: priceElement,
+                changeElement: changeElement
+            };
+        }
+    });
+
+    function updatePrices() {
+        axios.get('/api/cryptos/realtime')
+            .then(response => {
+                const cryptos = response.data;
+                
+                cryptos.forEach(crypto => {
+                    if (cryptoData[crypto.symbol]) {
+                        const data = cryptoData[crypto.symbol];
+                        const oldPrice = data.price;
+                        const newPrice = parseFloat(crypto.price);
+                        const newChange = parseFloat(crypto.change_24h);
+
+                        // Update price with animation
+                        if (oldPrice !== newPrice) {
+                            data.priceElement.classList.add('price-updated');
+                            if (newPrice > oldPrice) {
+                                data.priceElement.classList.add('price-increase');
+                                setTimeout(() => data.priceElement.classList.remove('price-increase'), 2000);
+                            } else if (newPrice < oldPrice) {
+                                data.priceElement.classList.add('price-decrease');
+                                setTimeout(() => data.priceElement.classList.remove('price-decrease'), 2000);
+                            }
+                            setTimeout(() => data.priceElement.classList.remove('price-updated'), 2000);
+                        }
+
+                        // Update price display
+                        data.price = newPrice;
+                        data.priceElement.textContent = '$' + newPrice.toLocaleString('en-US', {
+                            minimumFractionDigits: 2,
+                            maximumFractionDigits: 2
+                        });
+                        data.priceElement.dataset.price = newPrice;
+
+                        // Update change
+                        if (data.change !== newChange) {
+                            data.change = newChange;
+                            const isPositive = newChange >= 0;
+                            data.changeElement.className = `font-semibold px-3 py-1 rounded-lg text-sm change-display ${isPositive ? 'bg-green-100 text-green-700 dark:bg-green-900 dark:text-green-300' : 'bg-red-100 text-red-700 dark:bg-red-900 dark:text-red-300'}`;
+                            data.changeElement.innerHTML = `${isPositive ? '↑' : '↓'} ${isPositive ? '+' : ''}${newChange.toFixed(2)}%`;
+                            data.changeElement.dataset.change = newChange;
+                        }
+                    }
+                });
+            })
+            .catch(error => {
+                console.error('Error updating prices:', error);
+            });
+    }
+
+    // Update prices every 30 seconds
+    document.addEventListener('DOMContentLoaded', function() {
+        updatePrices();
+        priceUpdateInterval = setInterval(updatePrices, 30000);
+    });
+
+    // Cleanup on page unload
+    window.addEventListener('beforeunload', function() {
+        if (priceUpdateInterval) {
+            clearInterval(priceUpdateInterval);
+        }
+    });
+</script>
 @endpush
 @endsection

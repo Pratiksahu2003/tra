@@ -5,7 +5,7 @@ A modern Laravel-based cryptocurrency trading platform with authentication, port
 ## Features
 
 - 🔐 **Authentication System** - Laravel Breeze authentication with dark mode support
-- 💰 **Crypto Trading** - Buy and sell cryptocurrencies
+- 💰 **Crypto Trading** - Buy and sell Crypto Market
 - 📊 **Portfolio Management** - Track your holdings and performance
 - 📈 **Dashboard** - View portfolio value, profit/loss, and recent transactions
 - 🎨 **Modern UI** - Beautiful, responsive design with Tailwind CSS
@@ -70,12 +70,12 @@ A modern Laravel-based cryptocurrency trading platform with authentication, port
 
 ### Public Pages (No Login Required)
 1. **Homepage** (`/`) - Beautiful landing page showcasing the platform
-2. **Public Crypto List** (`/cryptos/public`) - Browse all cryptocurrencies without logging in
+2. **Public Crypto List** (`/cryptos/public`) - Browse all Crypto Market without logging in
 
 ### Authenticated Pages (Login Required)
 1. **Register/Login** - Create an account or login with the default credentials
 2. **Dashboard** (`/dashboard`) - Overview of your portfolio, stats, and recent activity
-3. **Browse Cryptocurrencies** (`/cryptos`) - View all available cryptocurrencies
+3. **Browse Crypto Market** (`/cryptos`) - View all available Crypto Market
 4. **Trade** (`/cryptos/{id}`) - Click on any cryptocurrency to buy or sell
 5. **Portfolio** (`/portfolio`) - Check your holdings and performance
 6. **Transaction History** (`/transactions`) - View all your past transactions
@@ -120,7 +120,7 @@ routes/
 
 All API endpoints require authentication (`auth:sanctum` middleware):
 
-- `GET /api/cryptos` - List all cryptocurrencies
+- `GET /api/cryptos` - List all Crypto Market
 - `GET /api/cryptos/{id}` - Get crypto details
 - `GET /api/portfolio` - Get user portfolio
 - `GET /api/transactions` - Get user transactions

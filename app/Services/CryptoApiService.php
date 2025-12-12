@@ -129,5 +129,55 @@ class CryptoApiService
             return null;
         }
     }
+
+    /**
+     * Get all available Crypto Market list from CoinGecko
+     * This returns all possible coins (thousands of them)
+     */
+    public function getAllCryptoList()
+    {
+        try {
+            $response = Http::timeout(30)->get($this->baseUrl . '/coins/list', [
+                'include_platform' => 'false'
+            ]);
+
+            if ($response->successful()) {
+                return $response->json();
+            }
+
+            Log::error('CoinGecko API error (coins/list): ' . $response->body());
+            return null;
+        } catch (\Exception $e) {
+            Log::error('Error fetching all crypto list: ' . $e->getMessage());
+            return null;
+        }
+    }
+
+    /**
+     * Get top Crypto Market by market cap (supports pagination)
+     */
+    public function getTopCryptos($page = 1, $perPage = 250)
+    {
+        try {
+            $response = Http::timeout(30)->get($this->baseUrl . '/coins/markets', [
+                'vs_currency' => 'usd',
+                'order' => 'market_cap_desc',
+                'per_page' => min($perPage, 250), // CoinGecko max is 250
+                'page' => $page,
+                'sparkline' => false,
+                'price_change_percentage' => '24h'
+            ]);
+
+            if ($response->successful()) {
+                return $response->json();
+            }
+
+            Log::error('CoinGecko API error (markets): ' . $response->body());
+            return null;
+        } catch (\Exception $e) {
+            Log::error('Error fetching top cryptos: ' . $e->getMessage());
+            return null;
+        }
+    }
 }
 

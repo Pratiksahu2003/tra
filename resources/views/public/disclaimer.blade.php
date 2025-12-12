@@ -25,7 +25,7 @@
                     <strong class="text-red-600 dark:text-red-400">WARNING:</strong> The information provided on Trading Floor is for general informational purposes only and should not be considered as financial, investment, legal, or tax advice.
                 </p>
                 <p class="text-gray-700 dark:text-gray-300 leading-relaxed">
-                    Cryptocurrency trading involves substantial risk of loss and is not suitable for all investors. The high degree of leverage can work against you as well as for you. Before deciding to trade cryptocurrencies, you should carefully consider your investment objectives, level of experience, and risk appetite.
+                    Cryptocurrency trading involves substantial risk of loss and is not suitable for all investors. The high degree of leverage can work against you as well as for you. Before deciding to trade Crypto Market, you should carefully consider your investment objectives, level of experience, and risk appetite.
                 </p>
             </div>
 
@@ -64,14 +64,14 @@
                     <div class="bg-white dark:bg-gray-700 p-6 rounded-xl">
                         <h3 class="text-xl font-semibold text-gray-900 dark:text-gray-100 mb-3">Liquidity Risk</h3>
                         <p class="text-gray-700 dark:text-gray-300 leading-relaxed">
-                            Some cryptocurrencies may have limited liquidity, making it difficult to buy or sell large amounts without significantly affecting the price. This can result in execution delays or unfavorable prices.
+                            Some Crypto Market may have limited liquidity, making it difficult to buy or sell large amounts without significantly affecting the price. This can result in execution delays or unfavorable prices.
                         </p>
                     </div>
                     
                     <div class="bg-white dark:bg-gray-700 p-6 rounded-xl">
                         <h3 class="text-xl font-semibold text-gray-900 dark:text-gray-100 mb-3">Regulatory Risk</h3>
                         <p class="text-gray-700 dark:text-gray-300 leading-relaxed">
-                            Cryptocurrency regulations vary by jurisdiction and are subject to change. Regulatory actions or changes in laws may adversely affect the value of cryptocurrencies or restrict trading activities.
+                            Cryptocurrency regulations vary by jurisdiction and are subject to change. Regulatory actions or changes in laws may adversely affect the value of Crypto Market or restrict trading activities.
                         </p>
                     </div>
                     

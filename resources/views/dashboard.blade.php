@@ -144,10 +144,10 @@
                 </div>
             </div>
 
-            <!-- Top Cryptocurrencies -->
+            <!-- Top Crypto Market -->
             <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg">
                 <div class="p-6 border-b border-gray-200 dark:border-gray-700">
-                    <h3 class="text-lg font-semibold text-gray-900 dark:text-gray-100">Top Cryptocurrencies</h3>
+                    <h3 class="text-lg font-semibold text-gray-900 dark:text-gray-100">Top Crypto Market</h3>
                 </div>
                 <div class="overflow-x-auto">
                     <table class="min-w-full divide-y divide-gray-200 dark:divide-gray-700">

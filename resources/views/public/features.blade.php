@@ -8,7 +8,7 @@
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <h1 class="text-4xl md:text-5xl font-bold mb-6">Platform Features</h1>
         <p class="text-xl md:text-2xl text-blue-100 max-w-3xl mx-auto">
-            Everything you need to trade cryptocurrencies successfully, all in one powerful platform.
+            Everything you need to trade Crypto Market successfully, all in one powerful platform.
         </p>
     </div>
 </section>
@@ -30,7 +30,7 @@
                     </svg>
                 </div>
                 <h3 class="text-2xl font-bold text-gray-900 dark:text-gray-100 mb-3">Easy Trading</h3>
-                <p class="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">Buy and sell cryptocurrencies with just a few clicks. Our intuitive interface makes trading simple for beginners and powerful for experts alike.</p>
+                <p class="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">Buy and sell Crypto Market with just a few clicks. Our intuitive interface makes trading simple for beginners and powerful for experts alike.</p>
                 <ul class="space-y-2 text-sm text-gray-600 dark:text-gray-400">
                     <li class="flex items-center"><svg class="w-4 h-4 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>One-click trading</li>
                     <li class="flex items-center"><svg class="w-4 h-4 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>Market & limit orders</li>
@@ -215,7 +215,7 @@
         <p class="text-xl text-blue-100 mb-8">Join thousands of traders already using our platform</p>
         <div class="flex flex-col sm:flex-row gap-4 justify-center">
             <a href="{{ route('cryptos.public') }}" class="inline-flex items-center px-10 py-4 bg-white text-blue-600 rounded-lg font-semibold hover:bg-gray-100 transition shadow-xl hover:shadow-2xl transform hover:-translate-y-1 text-lg">
-                Browse Cryptocurrencies
+                Browse Crypto Market
                 <svg class="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
                 </svg>

@@ -16,7 +16,7 @@
                         {{ __('Dashboard') }}
                     </x-nav-link>
                     <x-nav-link :href="route('cryptos.index')" :active="request()->routeIs('cryptos.*')">
-                        {{ __('Cryptocurrencies') }}
+                        {{ __('Crypto Market') }}
                     </x-nav-link>
                     <x-nav-link :href="route('portfolio.index')" :active="request()->routeIs('portfolio.*')">
                         {{ __('Portfolio') }}
@@ -80,7 +80,7 @@
                 {{ __('Dashboard') }}
             </x-responsive-nav-link>
             <x-responsive-nav-link :href="route('cryptos.index')" :active="request()->routeIs('cryptos.*')">
-                {{ __('Cryptocurrencies') }}
+                {{ __('Crypto Market') }}
             </x-responsive-nav-link>
             <x-responsive-nav-link :href="route('portfolio.index')" :active="request()->routeIs('portfolio.*')">
                 {{ __('Portfolio') }}

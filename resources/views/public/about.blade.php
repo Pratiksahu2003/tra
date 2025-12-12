@@ -131,7 +131,7 @@
             <p class="text-xl text-blue-100 mb-8">Join thousands of traders already using our platform</p>
             <div class="flex flex-col sm:flex-row gap-4 justify-center">
                 <a href="{{ route('cryptos.public') }}" class="inline-flex items-center px-8 py-4 bg-white text-blue-600 rounded-lg font-semibold hover:bg-gray-100 transition shadow-lg">
-                    Browse Cryptocurrencies
+                    Browse Crypto Market
                     <svg class="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
                     </svg>

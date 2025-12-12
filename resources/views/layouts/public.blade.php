@@ -25,7 +25,7 @@
                 </div>
                 <div class="hidden md:flex items-center space-x-1">
                     <a href="{{ route('home') }}" class="px-4 py-2 rounded-lg text-sm font-medium transition {{ request()->routeIs('home') ? 'bg-blue-100 text-blue-600 dark:bg-blue-900 dark:text-blue-400' : 'text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700' }}">Home</a>
-                    <a href="{{ route('cryptos.public') }}" class="px-4 py-2 rounded-lg text-sm font-medium transition {{ request()->routeIs('cryptos.public') ? 'bg-blue-100 text-blue-600 dark:bg-blue-900 dark:text-blue-400' : 'text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700' }}">Cryptocurrencies</a>
+                    <a href="{{ route('cryptos.public') }}" class="px-4 py-2 rounded-lg text-sm font-medium transition {{ request()->routeIs('cryptos.public') ? 'bg-blue-100 text-blue-600 dark:bg-blue-900 dark:text-blue-400' : 'text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700' }}">Crypto Market</a>
                     <a href="{{ route('about') }}" class="px-4 py-2 rounded-lg text-sm font-medium transition {{ request()->routeIs('about') ? 'bg-blue-100 text-blue-600 dark:bg-blue-900 dark:text-blue-400' : 'text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700' }}">About</a>
                     <a href="{{ route('features') }}" class="px-4 py-2 rounded-lg text-sm font-medium transition {{ request()->routeIs('features') ? 'bg-blue-100 text-blue-600 dark:bg-blue-900 dark:text-blue-400' : 'text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700' }}">Features</a>
                     <a href="{{ route('contact') }}" class="px-4 py-2 rounded-lg text-sm font-medium transition {{ request()->routeIs('contact') ? 'bg-blue-100 text-blue-600 dark:bg-blue-900 dark:text-blue-400' : 'text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700' }}">Contact</a>
@@ -44,7 +44,7 @@
             <div id="mobile-menu" class="hidden md:hidden pb-4">
                 <div class="flex flex-col space-y-2">
                     <a href="{{ route('home') }}" class="px-4 py-2 rounded-lg text-sm font-medium {{ request()->routeIs('home') ? 'bg-blue-100 text-blue-600 dark:bg-blue-900 dark:text-blue-400' : 'text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700' }}">Home</a>
-                    <a href="{{ route('cryptos.public') }}" class="px-4 py-2 rounded-lg text-sm font-medium {{ request()->routeIs('cryptos.public') ? 'bg-blue-100 text-blue-600 dark:bg-blue-900 dark:text-blue-400' : 'text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700' }}">Cryptocurrencies</a>
+                    <a href="{{ route('cryptos.public') }}" class="px-4 py-2 rounded-lg text-sm font-medium {{ request()->routeIs('cryptos.public') ? 'bg-blue-100 text-blue-600 dark:bg-blue-900 dark:text-blue-400' : 'text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700' }}">Crypto Market</a>
                     <a href="{{ route('about') }}" class="px-4 py-2 rounded-lg text-sm font-medium {{ request()->routeIs('about') ? 'bg-blue-100 text-blue-600 dark:bg-blue-900 dark:text-blue-400' : 'text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700' }}">About</a>
                     <a href="{{ route('features') }}" class="px-4 py-2 rounded-lg text-sm font-medium {{ request()->routeIs('features') ? 'bg-blue-100 text-blue-600 dark:bg-blue-900 dark:text-blue-400' : 'text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700' }}">Features</a>
                     <a href="{{ route('contact') }}" class="px-4 py-2 rounded-lg text-sm font-medium {{ request()->routeIs('contact') ? 'bg-blue-100 text-blue-600 dark:bg-blue-900 dark:text-blue-400' : 'text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700' }}">Contact</a>
@@ -75,7 +75,7 @@
                 <div>
                     <h4 class="text-white font-semibold mb-4">Platform</h4>
                     <ul class="space-y-2 text-sm">
-                        <li><a href="{{ route('cryptos.public') }}" class="hover:text-white transition">Cryptocurrencies</a></li>
+                        <li><a href="{{ route('cryptos.public') }}" class="hover:text-white transition">Crypto Market</a></li>
                         <li><a href="{{ route('about') }}" class="hover:text-white transition">About</a></li>
                         <li><a href="{{ route('features') }}" class="hover:text-white transition">Features</a></li>
                         <li><a href="{{ route('contact') }}" class="hover:text-white transition">Contact</a></li>

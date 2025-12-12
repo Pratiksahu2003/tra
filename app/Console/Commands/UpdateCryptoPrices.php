@@ -39,7 +39,7 @@ class UpdateCryptoPrices extends Command
             $updated++;
         }
 
-        $this->info("Successfully updated {$updated} cryptocurrencies!");
+        $this->info("Successfully updated {$updated} Crypto Market!");
         return Command::SUCCESS;
     }
 }
